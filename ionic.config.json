@@ -1,0 +1,7 @@
+{
+  "name": "adivina-numero",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
