@@ -1,8 +1,12 @@
 <ion-header [translucent]="true">
+  <ion-toolbar></ion-toolbar>
   <ion-toolbar>
     <ion-title>
-      Blank
+      <strong>ADIVINA UN NÚMERO</strong>
     </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    (entre 1 y 1000)
   </ion-toolbar>
 </ion-header>
 
@@ -12,9 +16,37 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div id="controles">
+      <ion-content>
+        <div>
+          <br><br>
+          <strong>¡Inténtalo!</strong>
+          <br><br>
+          <ion-input [(ngModel)]="numero" placeholder="Introduce un número ..."></ion-input>
+
+          <ion-button (click)="suma()">+</ion-button>
+          <ion-button (click)="resta()">-</ion-button>
+
+          <p>El número es {{ numero }} ?</p>
+          <ng-container *ngIf="numero == 0">Debe ser distinto de 0</ng-container>
+          <ng-container *ngIf="numSecret<numero && numero != 0">Inténtalo de nuevo, es menor que {{ numero }}</ng-container>
+          <ng-container *ngIf="numSecret==numero">¡Has acertado! es {{ numero }}</ng-container>
+          <ng-container *ngIf="numSecret>numero && numero != 0">Inténtalo de nuevo, es mayor que {{ numero }}</ng-container>
+        </div>
+      </ion-content>
+
+    </div>
   </div>
 </ion-content>
+<ion-footer>
+  <ion-button color="tertiary" href="#">Volver a jugar</ion-button>
+</ion-footer>
+
+<ion-footer>
+  <ion-toolbar></ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Práctica de Ionic 2º DAM</ion-title>
+    <p>Natalia CM</p>
+  </ion-toolbar>
+</ion-footer>
