@@ -9,13 +9,7 @@
     (entre 1 y 1000)
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
   <div id="container">
     <div id="controles">
       <ion-content>
@@ -35,14 +29,12 @@
           <ng-container *ngIf="numSecret>numero && numero != 0">Inténtalo de nuevo, es mayor que {{ numero }}</ng-container>
         </div>
       </ion-content>
-
     </div>
   </div>
 </ion-content>
 <ion-footer>
   <ion-button color="tertiary" href="#">Volver a jugar</ion-button>
 </ion-footer>
-
 <ion-footer>
   <ion-toolbar></ion-toolbar>
   <ion-toolbar>
