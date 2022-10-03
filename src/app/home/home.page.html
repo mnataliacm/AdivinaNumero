@@ -19,8 +19,8 @@
           <br><br>
           <ion-input [(ngModel)]="numero" placeholder="Introduce un número ..."></ion-input>
 
-          <ion-button (click)="suma()">+</ion-button>
-          <ion-button (click)="resta()">-</ion-button>
+          <ion-button color="tertiary" (click)="suma()">+</ion-button>
+          <ion-button color="tertiary" (click)="resta()">-</ion-button>
 
           <p>El número es {{ numero }} ?</p>
           <ng-container *ngIf="numero == 0">Debe ser distinto de 0</ng-container>
@@ -33,12 +33,22 @@
   </div>
 </ion-content>
 <ion-footer>
-  <ion-button color="tertiary" href="#">Volver a jugar</ion-button>
+  <ion-button color="tertiary" id="reinicio" href="#">Volver a jugar</ion-button>
 </ion-footer>
 <ion-footer>
-  <ion-toolbar></ion-toolbar>
   <ion-toolbar>
-    <ion-title>Práctica de Angular-Ionic 2º DAM</ion-title>
-    <p>Natalia CM</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md>
+          <h4>C.P.I.F.P. NUEVO 2º DAM</h4>
+          <h4>Acceso a Datos - HLC</h4>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <h4></h4>
+          <h4>Práctica de Angular-Ionic </h4>
+          <h4>Natalia CM</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-footer>
