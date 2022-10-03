@@ -1,4 +1,4 @@
 # AdivinaNumero
 Programa para adivinar un número aleatorio entre 1 y 1000.
 
-![adivinaNumero](https://user-images.githubusercontent.com/74043250/193425636-5820cff7-a5bd-4c36-84c5-089cedc17369.png)
+![adivinaNumero](https://user-images.githubusercontent.com/74043250/193638991-1da89f82-bd5a-4597-aafb-e2beb1ff9c97.png)
