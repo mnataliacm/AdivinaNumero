@@ -1,52 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar></ion-toolbar>
+<ion-header >
   <ion-toolbar>
     <ion-title>
-      <strong>ADIVINA UN NÚMERO</strong>
+      <strong>NÚMERO OCULTO</strong>
     </ion-title>
   </ion-toolbar>
-  <ion-toolbar>
-    (entre 1 y 1000)
-  </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <div id="controles">
-      <ion-content>
-        <div>
-          <br><br>
-          <strong>¡Inténtalo!</strong>
-          <br><br>
-          <ion-input [(ngModel)]="numero" placeholder="Introduce un número ..."></ion-input>
 
-          <ion-button color="tertiary" (click)="suma()">+</ion-button>
-          <ion-button color="tertiary" (click)="resta()">-</ion-button>
-
-          <p>El número es {{ numero }} ?</p>
-          <ng-container *ngIf="numero == 0">Debe ser distinto de 0</ng-container>
-          <ng-container *ngIf="numSecret<numero && numero != 0">Inténtalo de nuevo, es menor que {{ numero }}</ng-container>
-          <ng-container *ngIf="numSecret==numero">¡Has acertado! es {{ numero }}</ng-container>
-          <ng-container *ngIf="numSecret>numero && numero != 0">Inténtalo de nuevo, es mayor que {{ numero }}</ng-container>
-        </div>
-      </ion-content>
+<ion-content class="ion-padding">
+  <div id="marco">
+  <div id="controles">
+      <br><br>
+      <h1>¡Inténta adivinarlo!</h1>
+      <p>(entre 1 y 1000)</p>
+      <br>
+      <ion-input [(ngModel)]="numero" placeholder="Introduce un número ..."></ion-input>
+      <ion-button color="tertiary" (click)="suma()">+</ion-button>
+      <ion-button color="tertiary" (click)="resta()">-</ion-button>
+      <p>El número oculto es {{ numero }} ?</p>
+      <ng-container *ngIf="numero == 0">Debe ser distinto de 0</ng-container>
+      <ng-container *ngIf="numSecret<numero && numero != 0">No, el número oculto es menor que {{ numero }}
+      </ng-container>
+      <ng-container *ngIf="numSecret==numero">¡Has acertado! es {{ numero }}</ng-container>
+      <ng-container *ngIf="numSecret>numero && numero != 0">No, el número oculto es mayor que {{ numero }}
+      </ng-container>
+      <div id="boton">
+        <ion-button color="tertiary" id="reinicio" href="#">Volver a jugar</ion-button>
+      </div>
+      <br>
     </div>
-  </div>
+    </div>
 </ion-content>
-<ion-footer>
-  <ion-button color="tertiary" id="reinicio" href="#">Volver a jugar</ion-button>
-</ion-footer>
+
 <ion-footer>
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-        <ion-col size="12" size-md>
-          <h4>C.P.I.F.P. NUEVO 2º DAM</h4>
-          <h4>Acceso a Datos - HLC</h4>
+        <ion-col size="4" size-md>
+          <h6>C.P.I.F.P. NUEVO 2º DAM</h6>
+          <h6>Acceso a Datos - HLC</h6>
         </ion-col>
-        <ion-col size="12" size-md>
-          <h4></h4>
-          <h4>Práctica de Angular-Ionic </h4>
-          <h4>Natalia CM</h4>
+        <ion-col>
+          <a href="https://ionicframework.com/" target="_blank">
+            <ion-icon name="logo-ionic"></ion-icon>
+          </a>
+          <a href="https://angular.io/" target="_blank">
+            <ion-icon name="logo-angular"></ion-icon>
+          </a>
+          <a href="https://github.com/mnataliacm/AdivinaNumero.git" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col size="4" size-md>
+          <h6>Práctica de Angular-Ionic </h6>
+          <h6>Natalia CM</h6>
         </ion-col>
       </ion-row>
     </ion-grid>

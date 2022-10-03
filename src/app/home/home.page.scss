@@ -1,41 +1,42 @@
 ion-header {
   text-align: center;
 }
-
 ion-footer {
   text-align: center;
 }
-
 div {
   font-size: 25px;
   text-align: center;
-  padding: 5px;
-  margin: auto;
-  background-color:rgb(162, 102, 219);
-  height: 100%;
 }
-
-div#container {
-  height: 95%;
-}
-
-div#controles {
+div#marco {
   background-color: rgb(109, 7, 150);
-  margin: auto;
   padding: 2%;
 }
-
+div#controles {
+  background-color:rgb(162, 102, 219);
+}
 strong {
   font-size: 30px;
 }
-
+h1 {
+  font-size: 40px;
+}
 ion-input {
   background-color: rgb(125, 29, 252);
   margin: auto;
   width: max-content;
 }
-
+div#boton {
+  margin-top: 5%;
+}
 ion-button#reinicio {
   background-color: blueviolet;
   font-size: 20px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+ion-icon {
+  font-size: 30px;
+  margin: 5%;
+  color: white;
 }
